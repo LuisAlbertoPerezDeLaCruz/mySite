@@ -1,0 +1,9 @@
+<form action="" method="post">
+	{% if not message %}
+	    {% csrf_token %}
+	    {{ form }}
+	    <input type="submit" value="Submit" />
+    {% else %}
+		<P>{{message}}</P>    	
+    {% endif %}
+</form>
